@@ -7,7 +7,7 @@
 <title>회원가입</title>
 </head>
 <body>
-<form action="joinProc.jsp" method="post">
+<form action="web/login/joinProc.jsp" method="post">
 
 <table border="1" align="center">
 <tr><th colspan="2">회원가입</th></tr>
@@ -48,7 +48,7 @@
 <tr>
 <td colspan="3" align="center">
 <input type="submit" value="확인">      
-<input type="button" value="취소" onclick="window.location.href='/model/web/login/loginForm.jsp'">
+<input type="button" value="취소" onclick="window.location.href='index.jsp'">
 </td>
 </tr>
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>ID / PW 찾기</title>
 </head>
 <body>
 ID PW 찾기페이지

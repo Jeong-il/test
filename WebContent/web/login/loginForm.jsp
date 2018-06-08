@@ -4,6 +4,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>게시판</title>
+<script type="text/javascript">
+
+//스칼라법
+function Login(){
+	//validation 체크!
+	
+	var input_id = document.getElementsByName("user_id")[0].value
+	var input_pw = document.getElementsByName("pw")[0].value
+	
+	if(input_id.length <= 8){
+		alert("아이디를 입력 해주세요.");
+		return false;
+	}
+	if(input_pw.length <= 8){
+		alert("비밀번호를 입력 해주세요.");
+		return false;
+	}
+}
+</script>
 </head>
 <body>
 <%
@@ -15,12 +34,12 @@ if(session.getAttribute("sessionId") == null) {
 <h1>로그인 화면</h1>
 <br/>
 
-<form action="loginProc.jsp" method="post">
+<form action="web/login/loginProc.jsp" method="post">
 	ID : <input type="text" name="user_id"/> <br/><br/>
 	PW : <input type="password" name="pw"/> <br/><br/>
-	<input type="submit" value="로그인"/>
-	<input type="button" value="ID / PW 찾기" onClick="window.location.href='findIdPw.jsp'"/>	
-	<input type="button" value="회원가입" onClick="window.location.href='joinForm.jsp'"/>
+	<input type="submit" value="로그인" onclick="Login();"/>
+	<input type="button" value="ID / PW 찾기" onClick="location.href='web/login/findIdPw.jsp'"/>	
+	<input type="button" value="회원가입" onClick="location.href='web/login/joinForm.jsp'"/>
 </form>
 
 </center>
@@ -28,7 +47,7 @@ if(session.getAttribute("sessionId") == null) {
 <%} else { %>
 <center>
 <h2>Welcome back, <%= session.getAttribute("sessionId") %></h2>
-<input type="text" value="로그아웃" onclick="window.location.href='logout.jsp'">
+<input type="text" value="로그아웃" onclick="location.href='web/login/logout.jsp'">
 </center>
 <% } %>
 </body>

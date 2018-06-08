@@ -7,6 +7,6 @@
 <title>인덱스페이지</title>
 </head>
 <body>
-<jsp:forward page="/web/login/loginForm.jsp"></jsp:forward>
+<jsp:forward page="web/login/loginForm.jsp"></jsp:forward>
 </body>
 </html>
