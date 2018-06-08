@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>인덱스페이지</title>
 </head>
 <body>
-<jsp:forward page="/web/login/loginform.jsp"></jsp:forward>
+<jsp:forward page="/web/login/loginForm.jsp"></jsp:forward>
 </body>
 </html>
