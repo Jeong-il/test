@@ -4,6 +4,7 @@
 <%@ page import="model.dbconnection.DBUtil"%>
 
 <%
+	
 	request.setCharacterEncoding("UTF-8");
 
 	String user_id = request.getParameter("user_id");
@@ -43,7 +44,7 @@
 		
 		
 
-		response.sendRedirect("main.jsp");
+		
 
 		// 죽은코드겠죠~  
 		/*
@@ -55,6 +56,7 @@
 		*/
 		DBUtil.close(pstmt);
 		DBUtil.close(conn);
+		response.sendRedirect("main.jsp");
 	} catch (Exception e) {
 		
 		//실재 >?????? 이유로 인하여 가입에 실패 하였습니다.   ex) 회원 가입에 실패 하였습니다. ex)비밀번호 조합이 맞지 안거나, 필수항목이 누락 되었습니다. 파라미터 변조가 발생하였습니다. 다시 확인하고 신청하여주시기 바랍니다.

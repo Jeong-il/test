@@ -8,16 +8,16 @@
 
 	String user_id = request.getParameter("user_id");
 	String pw = request.getParameter("pw");
-
+	
 	// 이걸 보안상 걸리겠죠
-	/*
-	암호화 ---> 단순! 
+	
+	/* 암호화 ---> 단순! 
 	가입시
 	오라클에서 암호화를 해서 저장을 하고
 	로그인시
-	오라클에서 암호화 된 값은 복후화해서 맞는지 확인을 하면 되겠쬬?
+	오라클에서 암호화 된 값은 복후화해서 맞는지 확인을 하면 되겠쬬? */
 			
-	*/
+	
 	Connection conn = DBUtil.getMySQLConnection();
 
 	String sql = "select * from member where user_id = ? and pw = ?";

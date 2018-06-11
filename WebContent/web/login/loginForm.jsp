@@ -15,10 +15,12 @@ function Login(){
 	
 	if(input_id.length <= 8){
 		alert("아이디를 입력 해주세요.");
+		document.getElementsByName("user_id")[0].focus();
 		return false;
 	}
 	if(input_pw.length <= 8){
 		alert("비밀번호를 입력 해주세요.");
+		document.getElementsByName("pw")[0].focus();
 		return false;
 	}
 }
@@ -37,7 +39,7 @@ if(session.getAttribute("sessionId") == null) {
 <form action="web/login/loginProc.jsp" method="post">
 	ID : <input type="text" name="user_id"/> <br/><br/>
 	PW : <input type="password" name="pw"/> <br/><br/>
-	<input type="submit" value="로그인" onclick="Login();"/>
+	<input type="button" value="로그인" onclick="Login();"/>
 	<input type="button" value="ID / PW 찾기" onClick="location.href='web/login/findIdPw.jsp'"/>	
 	<input type="button" value="회원가입" onClick="location.href='web/login/joinForm.jsp'"/>
 </form>
